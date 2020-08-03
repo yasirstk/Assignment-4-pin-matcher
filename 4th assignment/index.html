@@ -18,41 +18,67 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div  class="input-section half-width" name = "numPad">
-                    <input id="screen" class="form-control code-submit" type="text">
+                <form action="" name="calculator">
+                <div  class="input-section half-width" id = "calculator">
+                    <input id="screen" name="display" class="form-control code-submit" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div id="seven" class="button  btn-num" onclick="document.numPad.text.value +='7'">7</div>
-                              <div id="eight" class="button  btn-num">8</div>
-                              <div id="nine" class="button  btn-num">9</div>
+                              <div class="button">
+                                  <input type="button" value="7" onclick="calculator.screen.value = calculator.screen.value +='7'">
+                              </div>
+                              <div id="eight" class="button">
+                                <input type="button" value="8" onclick="calculator.screen.value = calculator.screen.value +='8'">
+                              </div>
+                              <div  class="button">
+                                <input type="button" value="9" onclick="calculator.screen.value = calculator.screen.value +='9'">
+                              </div>6
                             </div>
                             <div class="calc-button-row">
-                              <div id="four" class="button  btn-num">4</div>
-                              <div id="five" class="button  btn-num">5</div>
-                              <div id="six" class="button  btn-num">6</div>
+                              <div  class="button">
+                                <input type="button" value="4" onclick="calculator.screen.value = calculator.screen.value +='4'">
+                              </div>
+                              <div  class="button">
+                                <input type="button" value="5" onclick="calculator.screen.value = calculator.screen.value +='5'">
+                              </div>
+                              <div class="button">
+                                <input type="button" value="6" onclick="calculator.screen.value = calculator.screen.value +='6'">
+                              </div>
                             </div>
                             <div class="calc-button-row">
-                              <div id="one" class="button  btn-num">1</div>
-                              <div id="two" class="button  btn-num">2</div>
-                              <div id="three" class="button  btn-num">3</div>
+                              <div  class="button">
+                                <input type="button" value="1" onclick="calculator.screen.value = calculator.screen.value +='1'">
+                              </div>
+                              <div  class="button">
+                                <input type="button" value="2" onclick="calculator.screen.value = calculator.screen.value +='2'">
+                              </div>
+                              <div  class="button">
+                                <input type="button" value="3" onclick="calculator.screen.value = calculator.screen.value +='3'">
+                              </div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button">&lt;</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div class="button">
+                                    <input type="button" value="&lt;" onclick="calculator.screen.value = calculator.screen.value.slice(0, -1)">
+                                </div>
+                                <div class="button">
+                                    <input type="button" value="0" onclick="calculator.screen.value = calculator.screen.value +='0'">
+                                </div>
+                                <div class="button">
+                                    <input type="button" value="C" onclick="calculator.screen.value = ''">
+                                </div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
+                                <button id="pin-submit" type="submit" class="submit-btn" >Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
                 </div>
             </div>
+        </form>
         </div>
         <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="cross" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id="tick" class="notify">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
 
