@@ -5,9 +5,13 @@ codeGenerator.addEventListener("click", function(){
     document.getElementById("generatedCode").value = randNumber;
 })
 
-var submittedPin = document.getElementById("screen").value;
-document.getElementById("pin-submit").addEventListener("click",function(){
-    
-
+var pinSubmit = document.getElementById("pin-submit");
+    pinSubmit.addEventListener("click",function(){
+        const inputPin = document.getElementById("screen").value;
+       if(randNumber == inputPin){
+           document.getElementById("tick").style.display = "block";
+       }else{
+           document.getElementById('cross').style.display = "block";
+       }
 })
        
